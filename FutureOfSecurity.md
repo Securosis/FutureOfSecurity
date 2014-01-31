@@ -68,6 +68,96 @@ Greater reliance on external providers means greater reliance on their inherent 
 
 Some security issues even decline in the cloud. For example networking sniffing is largely impossible, the dynamic nature of cloud servers can remove the need for traditional patching (you can launch a new fully up-to-date server and shift live traffic to and from it with API calls), and network segmentation becomes the default. Centralizing resources improves our ability to audit and control, while still providing ubiquitous access.
 
+#Six Trends Changing the Face of Security
+
+While cloud and mobile computing upend our foundational delivery and consumption of technology, we simultaneously see six key inherent trends within  security that will, over time, completely transform its practice. These aren't disruptive innovations, but rather disruptive responses and incremental advances that better align with where the world is heading. 
+
+When we align these trends with the simultaneous advances and adoption of cloud and mobile computing we can build a picture of how security will look over the next seven to ten years.
+
+##Hypersegregation
+
+We have always known the dramatic security benefits of effective compartmentalization, but implementation was typically costly and often negatively impacted other business needs. This is changing on multiple fronts as we gain the ability to heavily segregate, by default, with minimal negative impact. Flat networks and operating systems will not only soon be an artifact of the past, but actually difficult to even implement.
+
+Hypersegregation makes it much more difficult for an attacker to extend their footprint once they gain access to a network or system, while also increasing the chances of detection.
+
+In cloud computing, most major platforms provide cloud-layer software firewalls, by default, around every running virtual machine. In cloud infrastructure, every single server is firewalled off from every other one, by default. The traditional environment equivalent is either managing host-based firewalls (in every host, across system types, with consistent policies that can be externally and instantly managed), or putting a physical firewall in front of every host on the network, that travels with the host as it moves. 
+
+These basic firewalls are managed via API, and by default even segregate every server from every other server in the same subnet. There is no such thing as a flat network when you deploy onto Infrastructure as a Service, unless you try *really hard* to replicate the less secure architecture. 
+
+This segregation has the potential to expand into non-cloud networks thanks to *Software Defined Networking*. Making hypersegregation the default in any infrastructure.
+
+We also see it working extremely effectively in our operating systems. Apple's iOS sandboxes every application by default, deeply segregating the environment. This is a major contributing factor to the complete lack of any widespread malware on iOS since the debut of the iPhone seven years ago. Apple now extends this protection to desktop and laptop computers by sandboxing all apps in the Mac App Store. 
+
+Google sandboxes all tabs and plugins in the Chrome web browser. Microsoft sandboxes much of Internet Explorer, and supports application level sandboxes. Third-party tools exist to extend sandboxing in operating systems through the use of virtualization technology. 
+
+Even application architectures themselves are migrating more towards segregating and isolating application functions to both improve resiliency and address security. There are practical examples today of task and process level segregation, making security decisions on whitelisted actions. 
+
+The end result is networks, platforms, and applications that are more resistant to attack, and limit the damage of attackers even when they succeed. This dramatically raises the overall costs of attacks, while reducing the necessity of addressing every vulnerability immediately or face exploitation.
+
+##Operationalization of Security
+
+Security, even today, still performs many rote tasks that don't actually require security expertise. For cost and operational efficiency we see organizations beginning to hand off these tasks to operations to allow security professionals to focus on what they are best at. This is augmented by increasing automation capabilities, not that we can ever eliminate the need for humans.
+
+We already see patch and antivirus management being handled by non-security teams. Some organizations now extend this to firewall management and even low-level incident management. Concurrently, we see the rise of security automation to handle more rote-level tasks, and even some higher-order functions, especially in assessment and configuration management.
+
+We expect security to shed extensive aspects of network security and monitoring, manual assessments, identity and access management, application security, and more. This, in turn, frees up security professionals for tasks that require more-extensive security expertise, such as incident response, security architectures, security analytics, and audit/assessment. 
+
+Security professionals will play a greater role as subject matter experts as most repetitive security tasks become embedded in to day to day operations, instead of being an outside function.
+
+##Incident Response
+
+One of the benefits of the increasing operationalization of security is a corresponding increase in the resources available for incident response. Attackers continue to improve as technology further embeds itself into our lives and economies. Security professionals have realized that it is impossible to completely stop attacks, and we need a greater focus on detecting and responding to incidents. This is beginning to shift security spending more towards IR tools and teams, especially as we adopt cloud and platforms that reduce our need for certain traditional infrastructure security tools.
+
+Leading organizations today are already shifting more and more resources to incident detection and response. To [reacting faster and better as we like to say here at Securosis](https://securosis.com/assets/library/reports/Securosis-RFAB_FINAL.pdf). Not merely the simple expedient of having an incident response plan, or even tools, but conceptually re-prioritizing and re-architecting entire security programs – to focus as much or more on detection and response as on pure defense. We will finally use all those big screens hanging in the SOC to do more than impress prospects and visitors.
+
+A focus on incident response, on more rapidly detecting and responding to attacker-driven incidents, will exceed our current checklist and vulnerability focused security model, affecting everything from technology decisions to budgeting and staffing.
+
+##Software Defined Security
+
+Today, security largely consists of boxes and agents separate from the infrastructure we protect. While these won't go away, with cloud and the increasing availability of APIs we gain the ability to directly integrate and manage with the infrastructure, as opposed to protecting it only from the outside. Security will rely more on tools and techniques to connect the infrastructure to our security tools and management directly, enabling adaptive and effective *security orchestration*.
+
+Software Defined Security is a natural outcome over the increasing use of cloud computing where the entire infrastructure, platforms, and applications are managed using APIs. Security can now directly manage exposed security features using the same APIs, and better integrate security tools into orchestrated environments when security tools themselves offer APIs.
+
+This is very different to how most security tools function today as many vendors silo off their products and restrict interoperability. However, we already see growing pressure on security vendors to extend API support, especially for products being deployed with cloud computing. 
+
+We gain incredible abilities to automate security, such as [the example in this linked paper for automating security configuration policy enforcement](https://securosis.com/assets/library/reports/SDS-Practical-Example.pdf). Imagine being able to instantly identify all unmanaged servers in your cloud, without scanning. Or automatically vulnerability assessing new systems when they first run or connect to the network, and quarantine them if they fail certain checks. In a few weeks we were even able to write a program that [completely automates most incident response and forensics tasks for a compromised cloud server, in a few seconds](https://github.com/Securosis/SecuritySquirrel). (Something we suspect a real programmer, as opposed to an industry analyst, could have completed in a fraction of the time).
+
+Software Defined Security automates security tasks for a more-agile security infrastructure. It bridges and orchestrates multiple security products with our environments themselves, and supports a security management plane that operates at cloud speed and scale.
+
+##Active Defense
+
+The old saying in security is the defender needs to be right every time, and the attacker only needs to be right once. Active defense reverses this concepts and *forces attacker perfection*. It dramatically increases the cost of attack, and is strongly reinforced by hypersegregation, the operationalization of security, and Software Defined Security while, in turn, becoming a cornerstone of incident response. 
+
+According to [the Data Breach Triangle](https://securosis.com/blog/the-data-breach-triangle/) an attacker needs a way in, something to steal or damage, and a way back out. Characterizing attackers and then tracking and understanding their activity is difficult even with extensive monitoring, but active defense technologies validate attackers by allowing the infrastructure and applications to interact with them directly, identifying them far more accurately than with monitoring alone. Now, even if an attacker is successful, they make the slightest mistake and we can detect and contain them. Responsive, automated defenses interact with attackers to reduce false positives and negatives.
+
+Instead of relying on out-of-date signatures, poor heuristics prone to false positives, or manual combing through packets and logs, we will instead build environments so laden with tripwires and landmines that they may end up being banned by a virtual Geneva Convention. Heuristic security tends to fail because it often relies on generic analysis of good and bad behavior that is difficult or impossible to model; active defenses interact with intruders while complicating and obfuscating the underlying structure. This dynamic interaction is far more likely to properly identify and classify an attacker.
+
+Active defenses will become commonplace, and in large part replace our signature-based systems of failure.
+
+##Closing the Action Loop
+
+Managing security today is a complicated dance of jumping between a series of disconnected tools. Not that we lack dashboards and management consoles, but those still reside in silos and are incapable of providing effective, coordinated, security analysis and response. We call the process of detection, analysis, and action the *Action Loop* (and yes, it is based on the concept of the [OODA loop for those of you with a military background](http://en.wikipedia.org/wiki/OODA_loop)). 
+
+Our current tools largely fall into general functional categories that are too distinct and isolated to really meet our needs. Some tools observe our environment (e.g., SIEM, DLP, and full packet capture), but they tend to focus on narrow slices – with massive gaps between tools hampering our ability to acquire related information which we need to understand incidents. From an alert, we need to jump into many different shells and command lines on multiple servers and appliances in order to see what’s really going on. When tools talk to each other, it’s rarely in a meaningful and useful way.
+
+While some tools can act with automation, it is again self-contained, uncoordinated, and (beyond the most simplistic incidents) more prone to break a business process than stop an attacker. When we want to perform a manual action, our environments are typically so segregated and complicated that we can barely manage something as simple as pushing a temporary firewall rule change.
+
+Recently we have seen the emergence of tools just beginning to deliver on the old dreams so shattered by the ugly reality of SIEM. These tools will combine the massive amounts of data we are currently collecting on our environments, at speeds and volumes long promised but never realized. We will steal analytics from big data; tune them for security; and architect systems that allow us to visualize our security posture, identify, and rapidly characterize incidents.
+
+From the same console we will be able to look at a high-level SIEM alert, drill down into the specifics, and analyze correlated data from multiple tools and sensors. 
+
+No, your current SIEM doesn’t do this.
+
+But the clincher is the closer. Rather than merely looking at incident data, we will act on the data using the same console. We will review the automated responses, model the impact with additional analytics and visualization (real-time attack and defense modeling, based on near-real-time assessment data), and then tune and implement additional actions to contain, stop, and investigate the attack.
+
+Detection, investigation, analysis, orchestration, and action all from the same console.
+
+##Disruptive Reinforcement
+
+These inherent security trends not only build and reinforce each other, but are, in turn, supported by increasing adoption of cloud and mobile technology (and, to a lesser degree, Big Data). We don't see these as pie in the sky predictions, but the logical extension of existing advancements and changes in the practice of security.
+
+They are not, however, evenly distributed. Although we see some organizations adopting most or all of these technologies and practices, it will likely be a decade or more before they become common throughout the security market. The end state may be a logical progression, but there are a lot of paths and velocities to get there.
+
 But some risks increase. The cloud management plane allows anyone with network access and credentials to manage your entire infrastructure -- including platforms and applications. We need to rely more on Identity and Access Management controls to segment out users and administrators within cloud services, then integrate them back into our organizations.
 
 Other security controls are fundamentally different in the cloud. We lose our ability to stick physical boxes in front of infrastructure and applications, but gain greater ability to integrate and manage security into the infrastructure itself. Automation creates dynamic environments where servers might exist for only short periods of time (between scanning windows), but we can insert current security agents and configurations at runtime.
