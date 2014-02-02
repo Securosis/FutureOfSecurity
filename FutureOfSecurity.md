@@ -175,3 +175,34 @@ Some trends are clear. Use of the cloud will continue, and the economics alone a
 Simultaneously, as we consolidate in the cloud we diversify with mobile devices. Social and economic forces will only increase the proliferation of personal devices, along with worker expectations for access to enterprise resources. Organizations can no longer depend on controlling devices or network access -- again shifting security needs.
 
 In the long run, these shifts appear likely to have a greater impact than our initial adoption of the Internet.
+
+# What it Means  
+
+The disruptions and trends we've described don't encompass all the advances in the worlds of technology and security, but represent those that will most fundamentally transform the practice of security over the next decade. For example, we haven't directly addressed Software Defined Network (crudely lumped into our cloud, hypersegregation, and Software Defined Security descriptions), malware ecosystems, or the increasing drive towards pervasive encryption (driven, in no small part, by government spying). Our focus is on those changes that most fundamentally alter the practice of security, and the resultant outcomes.
+
+The changes will come in fits and spurts; unevenly distributed based on technology adoption paces, economics, and even social factors. However, in aggregate, we believe a picture emerges we can use to guide our decisions today, both as organizations and professionals. All of these changes are currently in process, with plenty of real-world examples to draw from.
+
+This report focuses on the implications for three groups — security professionals, security vendors and providers, and cloud and infrastructure providers. Those tasked with implementing security, those who create the tools and services they use, and the public and private IT departments managing our platforms and services. 
+
+Let's start with some high-level principles for understanding how security controls will evolve, then dig into the implications for our three audiences.
+
+##Security Controls Evolution
+
+There is no way to predict exactly how the future will turn out and how security controls will evolve as these trends unfold. But asking one key question, and a few logical follow ups, most-quickly helps us identify how our security controls will likely adapt (or need to adapt) in the face of change.
+
+>How does this enable my security strategy? 
+
+What does the provider or technology give me? What does it do? What do I need to do? The idea of the question is to hone in on where the security lines shift in the face of change. 
+
+For example, when choosing a new cloud provider what security controls do they provide? Which can you manage? Where are the gaps? What security controls can you put in place to address those gaps? Does moving to the provider give you new security capabilities you otherwise lacked? 
+
+Or, when looking a new security tool like active defense. Does this obviate our need for IPS? Does it really improve our ability to detect attackers? What kind of attackers and attacks? How do we adjust our response strategy?
+
+Here are two interrelated examples:
+
+* iOS 7 includes hooks for mobile device management to restrict data migration on the device to only enterprise-approved accounts and apps, all strongly encrypted and enforced by stringent sandboxing. While this could significantly improve data security over standard computers, it does mean losing Data Loss Prevention monitoring and having to implement a particular flavor of mobile device management. However...
+* Cloud storage and collaboration providers keep track of every version of a file they hold for customers. Some even track all device and user access, on a per-file basis. Use one of these with your mobile apps and although you lose traditional DLP,  you gain an in-depth real-time audit of all activity with that file, including every device that has accessed it.
+
+The combination provides a security and audit capability that is essentially impossible with "traditional" device management and storage, but does require changing how you implement a series of security controls. 
+
+Focus on your security strategy. Determine what you can do, what your provider or tool will do, who is responsible, and the technology capabilities and limitations, *rather than how to migrate a specific, existing control to the new operating environment*.
