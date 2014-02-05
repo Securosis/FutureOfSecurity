@@ -201,7 +201,7 @@ Or, for a new security tool like active defense: Does this obviate our need for 
 Here are two interrelated examples:
 
 * iOS 7 includes mobile device management hooks to restrict data migration on the device to only enterprise-approved accounts and apps, all strongly encrypted and protected by stringent sandboxing. While this could significantly improve data security over standard computers, it also means giving up any possibility of Data Loss Prevention monitoring, and needing to implement a particular flavor of mobile device management. However...
-* Cloud storage and collaboration providers keep track of every version of every file they hold for customers. Some even track all device and user access on a per-file basis. Use one of these with your mobile apps, and you might be able to replace DLP monitoring with in-depth real-time auditing of all file activity at the cloud level -- including every device that accesses the files.
+* Cloud storage and collaboration providers keep track of every version of every file they hold for customers. Some even track all device and user access on a per-file basis. Use one of these with your mobile apps, and you might be able to replace DLP monitoring with in-depth real-time auditing of all file activity at the cloud level -- including every device that accesses the files.
 
 The combination provides a security and audit capability that is effectively impossible with 'traditional' device management and storage, but requires you to change how you implement a series of security controls.
 
@@ -246,31 +246,33 @@ All this is only possible due to the ongoing *operationalization of security,* w
 
 ##Implications for Security Vendors and Providers
 
-These shifts will likely dramatically affect existing security products and services. We already see cloud and mobile adoption and innovation outpacing many security tools and services. Right now it isn't materially affecting the profits of these companies, but they face serious financial risks if they fail to adapt in time. 
+These shifts are likely to dramatically affect existing security products and services. We already see cloud and mobile adoption and innovation outpacing many other security tools and services. They are not yet materially affecting the profits of these companies, but the financial risks of failing to adapt in time are serious.
 
-Some vendors are taking the "cloudwashing" path where they merely convert their product to a virtual appliance or make other minor tweaks, but for technical and operational reasons we expect these to fail. Tools need to fit the job, and as we've shown cloud and mobile aren't merely virtual versions of existing architectures, but fundamentally alter things at a deep level. The application architectures and operations models we see in leading web properties today are quite different than traditional web application stacks, and will likely become the dominant models over time since they better fit the capabilities of cloud and mobile.
+Many vendors have chosen to 'cloudwash' existing offerings -- they simply convert their product to a virtual appliance or make other minor tweaks, but for technical and operational reasons we do not see this as a viable option over the long term. Tools need to fit the job, and we have shown that cloud and mobile aren't merely virtual tweaks of existing architectures, but fundamentally alter things at a deep level. The application architectures and operations models we see in leading web properties today are quite different than traditional web application stacks, and likely to become the dominant models over time because they fit the capabilities of cloud and mobile.
 
-The security trends we identified also assume a shifting of priorities and spending. For example, hypersegregated cloud networks and greater reliance on automatically configuring servers (required for autoscaling, a fundamental cloud function) reduce the need for traditional patch management and antivirus. When it is trivial to replace a compromised server with a new one (within minutes), and traffic between servers is highly restricted on a per-server level, and we have better detection and incident response, AV, IDS, and patch management may not be the most necessary security controls. 
+The security trends we identified also assume shifting priorities and spending. For example hypersegregated cloud networks and greater reliance on automatically configuring servers (required for autoscaling, a fundamental cloud function) reduce the need for traditional patch management and antivirus. When it is trivial to replace a compromised server with a new one within minutes, traffic between servers is highly restricted at a per-server level, and detection and incident response are much improved, then AV, IDS, and patch management may not be essential security controls.
 
-Security tools need to be as agile and elastic as the infrastructure, endpoints, and services they protect, and need to fit the new workflows and operational models we see emerging with these advancements (like DevOps). 
+Security tools need to be as agile and elastic as the infrastructure, endpoints, and services they protect; and they need to fit the new workflow and operational models emerging to take advantages of these advances -- such as DevOps.
 
 The implications for security vendors and providers fall into two buckets:
 
-* Fundamental architectural and operational differences force dramatic changes to many security tools and services to even operate in the new environment.
-* Shifting priorities means customers will shift their security spending, impacting security market opportunities.
+* Fundamental architectural and operational differences require dramatic changes to many security tools and services to operate in the new environment.
+* Shifting priorities make customers shift security spending, impacting security market opportunities.
 
 ###Preparing for the Future
 
-It's impossible to include every possible recommendation for every security tool and service on the market, but these guiding principles can best prepare a security company to compete in these markets today, or as they become more dominant in the future:
+It is impossible to include every possible recommendation for every security tool and service on the market, but some guiding principles can prepare security companies to compete in these markets today, and as they become more dominant in the future:
 
-* *Support consumption and delivery of APIs:* Adding the ability to integrate with infrastructure, applications, and services directly using APIs increases security agility, supports Software Defined Security, and embeds security management more directly into platforms and services. For example, network security tools should integrate directly with Software Defined Networking and cloud platforms so users can manage network security in one place. We have customers complain to us today that they can't normalize firewall settings between their regular infrastructure and cloud providers and have to manage each separately. Security tools also need to provide APIs so they can be integrated into cloud automation, and don't become the rate limiter (and thus get kicked to the curb). Software Development Kits and robust APIs will likely become competitive differentiators since they make it easier to directly integrate security into operations, instead of interfering and altering workflows that provide strong business benefits.
-* *Don't rely on controlling or accessing all network traffic:* A large number of security tools today, from web filtering and DLP to IPS, rely on completely controlling network traffic and adding additional bumps in the wire for analysis and action. The more we move into cloud computing and extensive mobility, the fewer opportunities exist to capture connections and manage security in the network. Everything is simply too distributed, with enterprises routing less and less traffic through a core network. Where possible, integrate directly with the platforms and services over API, or embed security into host agents designed to work in highly agile cloud environments. For mobile workers, you can't assume the enterprise will route all traffic through you, so services will need to rely on Mobile Device Management APIs and providing more-granular protection at the app and service level.
-* *Provide extensive logs and feeds:* Security logs and tools shouldn't be a black hole of data; receiving but never providing. The Security Operations Center of the future will rely more on aggregating and correlating data using Big Data techniques, and they will need access to raw data feeds to be most effective. Expect the demands to be more extensive than those you see for existing SIEMs.
-* *Assume insanely high rates of change:* Today, especially in audit and assessment, we rely on managing a relatively static infrastructure. But when some cloud applications are designed to rely on servers that run for less than an hour, even a daily vulnerability scan is instantly out of date. Products should be as *stateless* as possible; relying on continually connecting and assessing the environment, instead of assuming things change slowly. 
+* *Support consumption and delivery of APIs:* Adding the ability to integrate with infrastructure, applications, and services directly using APIs increases security agility, supports Software Defined Security, and embeds security management more directly into platforms and services. For example network security tools should integrate directly with Software Defined Networking and cloud platforms so users can manage network security in one place. Customers complain today that they cannot normalize firewall settings between classical infrastructure and cloud providers, and need to manage each separately. Security tools also need to provide APIs so they can integrate into cloud automation, and to avoid becoming a rate limiter -- and later inevitably getting kicked to the curb. Software Development Kits and robust APIs will likely become competitive differentiators because they help integrate directly security into operations, rather than interfering and perturbing workflows that provide strong business benefits.
+* *Don't rely on controlling or accessing all network traffic:* A large number of security tools today, from web filtering and DLP to IPS, rely on completely controlling network traffic and adding additional bumps in the wire for analysis and action. The more we move into cloud computing and extensive mobility, the fewer opportunities we have to capture connections and manage security in the network. Everything is simply too distributed, with enterprises routing less and less traffic through core networks. Where possible, integrate directly with platforms and services over APIs, or embed security into host agents designed for highly agile cloud environments. You cannot assume the enterprise will route all traffic from mobile workers through fixed control points, so services need to rely on Mobile Device Management APIs and provide more granular protection at the app and service level.
+* *Provide extensive logs and feeds:* Security logs and tools shouldn't be black holes of data: receiving but never providing. The Security Operations Center of the future will rely more on aggregating and correlating data using big data techniques, so they will need access to raw data feeds to be most effective. Expect demand to be more extensive than from existing SIEMs.
+* *Assume insanely high rates of change:* Today, especially in audit and assessment, we rely on managing relatively static infrastructure. But when cloud applications are designed to rely on servers that run for less than an hour, even daily vulnerability scans are instantly out of date. Products should be as *stateless* as possible -- rely on continually connecting and assessing the environment rather than assuming things change slowly.
 
-Companies that support APIs, rely less on bumps in the wire, provide extensive data feeds, and assume rapid rates of change are in a much better position to fit expanding use of cloud and mobile devices. It's a serious challenge, as we need to provide protection to a large volume of distributed services and users, without nearly the central control we are used to.
+Companies that support APIs, rely less on network hardware for control, provide extensive data feeds, and assume rapid change, are in much better positions to accomodate expanding use of cloud and mobile devices. It is a serious challenge, as we need to provide protection to a large volume of distributed services and users, without anything like the central control we are used to.
 
 We work extensively with security vendors. It is hard to overstate how few we see preparing for these shifts.
+
+----
 
 ##Implications for Cloud and Infrastructure Providers
 
@@ -278,7 +280,7 @@ We work extensively with security vendors. It is hard to overstate how few we se
 
 
  * For cloud and infrastructure providers
-        * Security is one of your top 1-3 responsibilities  
+        * Security is one of your top 1-3 responsibilities
             Leading cloud providers recognize that security is one of the top priorities, if not THE top priority. Customers cannot transition to the cloud if they can't trust providers. Perhaps consumers will, but certainly not enterprises accountable to stakeholders and regulators.
             * Customers won't migrate without a security baseline
             * You are a far bigger target than any single customer, and will experience advanced attacks.
@@ -288,24 +290,24 @@ We work extensively with security vendors. It is hard to overstate how few we se
                 * To a point
             * Multi tenancy breaks are a material risk for you and your customers
             * This includes your cloud supply chain
-        * Support APIs for security functions  
+        * Support APIs for security functions
             Cloud platforms shouldn't only expose APIs for cloud functions, but also for security functions. This enables security management and integration into existing security control architectures,
-        * Provide logs and activity  
+        * Provide logs and activity
             Extensive logging and auditing are vital for security, especially where the management plane is concerned.
             * Security requires transparency
             * Should be easily consumable in a standard format
-        * Federated identity shouldn't be hard  
+        * Federated identity shouldn't be hard
             Cloud providers should enable customer IAM by supporting clear, clean federated identity and access management.
             * Use popular standards that integrate with existing enterprise directories as easily as possible.
             * Support the full life cycle of identity management
-        * Security needs to work where the enterprise does  
+        * Security needs to work where the enterprise does
             Security controls need to extend to endpoints, enabling customers to protect enterprise data in mobile devices.
             * Mobility
-        * Encryption by default  
+        * Encryption by default
             Encryption is critical for anything companies related, and should become the default for cloud platforms. Then, allowing customers who want to to control their own keys will become a competitive differentiator, and potentially eliminate many data security concerns and smooth cloud adoption.
             * Allowing customers to manage keys is a competitive differentiator
                 * But can be technically and operationally difficult
-        * Must provide cloud consumer access to baseline security controls  
+        * Must provide cloud consumer access to baseline security controls
             For different cloud service models there a different sets of baseline security controls a cloud consumer needs access to manage. Without these, it is more difficult for enterprises to use the service since they can't control key security pieces they need, such as appropriate access control and authorization granularity.
             * Anything the consumer needs to enable their secure workflow
             * Access controls/authorizations
