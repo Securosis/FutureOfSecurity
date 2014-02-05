@@ -96,7 +96,7 @@ The end result is networks, platforms, and applications that are more resistant 
 
 ##Operationalization of Security
 
-Security, even today, still performs many rote tasks that don't actually require security expertise. For cost and operational efficiency reasons, we see organizations beginning to hand off these tasks to Operations to allow security professionals to focus on what they are best at. This is augmented by increasing automation capabilities -- not that we can ever eliminate the need for humans.
+Security, even today, still performs many rote tasks that don't actually require security expertise. For cost and operational efficiency reasons, we see organizations beginning to hand off these tasks to Operations to allow security professionals to focus on areas where they have the most to offer. This is augmented by increasing automation capabilities -- not that we can ever eliminate the need for humans.
 
 We already see patch and antivirus management being handled by non-security teams. Some organizations now extend this to firewall management and even low-level incident management. Concurrently we see the rise of security automation to handle more rote-level tasks and even some higher-order functions -- especially in assessment and configuration management.
 
