@@ -274,47 +274,42 @@ We work extensively with security vendors. It is hard to overstate how few we se
 
 ##Implications for Cloud and Infrastructure Providers
 
+Security becomes a top three priority for cloud and infrastructure providers of all types. For providers with enterprise customers or those that handle regulated data, security is likely your first priority. As important as it is to offer compelling, innovative services to your customers, a major security failure has the potential to wipe out your client's ability to trust you, even without any potential legal liabilities.
 
+If you handle information with value on behalf of your customers, you are, for nearly all intents and purposes, a form of bank. 
 
+###Trust is a Feature
 
- * For cloud and infrastructure providers
-        * Security is one of your top 1-3 responsibilities  
-            Leading cloud providers recognize that security is one of the top priorities, if not THE top priority. Customers cannot transition to the cloud if they can't trust providers. Perhaps consumers will, but certainly not enterprises accountable to stakeholders and regulators.
-            * Customers won't migrate without a security baseline
-            * You are a far bigger target than any single customer, and will experience advanced attacks.
-                * Simple economies of scale for an attacker
-            * Recognize that they own their data
-            * It becomes a competitive differentiator
-                * To a point
-            * Multi tenancy breaks are a material risk for you and your customers
-            * This includes your cloud supply chain
-        * Support APIs for security functions  
-            Cloud platforms shouldn't only expose APIs for cloud functions, but also for security functions. This enables security management and integration into existing security control architectures,
-        * Provide logs and activity  
-            Extensive logging and auditing are vital for security, especially where the management plane is concerned.
-            * Security requires transparency
-            * Should be easily consumable in a standard format
-        * Federated identity shouldn't be hard  
-            Cloud providers should enable customer IAM by supporting clear, clean federated identity and access management.
-            * Use popular standards that integrate with existing enterprise directories as easily as possible.
-            * Support the full life cycle of identity management
-        * Security needs to work where the enterprise does  
-            Security controls need to extend to endpoints, enabling customers to protect enterprise data in mobile devices.
-            * Mobility
-        * Encryption by default  
-            Encryption is critical for anything companies related, and should become the default for cloud platforms. Then, allowing customers who want to to control their own keys will become a competitive differentiator, and potentially eliminate many data security concerns and smooth cloud adoption.
-            * Allowing customers to manage keys is a competitive differentiator
-                * But can be technically and operationally difficult
-        * Must provide cloud consumer access to baseline security controls  
-            For different cloud service models there a different sets of baseline security controls a cloud consumer needs access to manage. Without these, it is more difficult for enterprises to use the service since they can't control key security pieces they need, such as appropriate access control and authorization granularity.
-            * Anything the consumer needs to enable their secure workflow
-            * Access controls/authorizations
-            * E.g network controls across IaaS
-            * Should be customer manageable via API
-                * This is the only way they can effectively integrate into their security management. You can't expect them to learn 100 web interfaces.
-* Conclusion
-    * Nothing here is science fiction, look around and you see the early edge
-    * This won't happen overnight
-    * You have the opportunity to take advantage of these today, but not everywhere
+Enterprises can't transition to the cloud without trust. Their stakeholders and regulators simply won't support it. Consumers may, to a point, but only the largest and most popular properties can withstand the loss of trust induced by a major breach. This leads to 6 corollaries:
 
+* Customers need a baseline of security features to migrate to the cloud. This varies by the type of service, but features like federated identity, data security, and internal access controls are table stakes. Cloud providers need a baseline of inherent security (to withstand attacks) plus customer-accessible security features to enable clients to implement their security strategy.
+* You are a far bigger target than any single customer, and will experience advanced attacks on a regular basis. Centralizing resources alters the economics of attacks, inducing bad guys to incur higher costs for the higher rewards of gaining access to all the cloud provider's customers at once. 
+* User own their data. Even if it isn't in a contract or SLA, if you affect their data in a way they don't expect, this breaks trust just a surely as a breach.
+* Multitenancy isolation failures are a material risk for you and your customers. If a customer's data is accidentally exposed to another customer, it is, again, no different than a breach. Hunting for multitenancy breaks in online services has been occurring for years, and assume criminals will sign up for the service just to hunt for this vector.
+* Trust applies to your entire cloud supply chain. Many cloud providers also rely on other providers. If you own the customer trust relationship, you are responsible for any failures anywhere in the digital supply chain.
 
+It isn't enough to simply *be secure*, you also need to *build trust* and *enable your customers' security strategies*.
+
+###Building Security In
+
+The following features and principles allow customers to align their security needs with cloud services, and will likely become competitive differentiators over time:
+
+* *Support APIs for security functions*. Cloud platforms and infrastructure shouldn't merely expose APIs for cloud features, but also security functions like identity management, access control, network security, and whatever else is in the purview of customer control. This enables security management and integration. Don't require customers to log into your web portal to manage security (but you also need to expose all these functions in your user interface).
+* *Provide logs and activity feeds*. Extensive logging and auditing are vital for security, especially for monitoring the cloud management plane. Expose as much data, as close to real time, as possible. Transparency is a powerful security enabler provided by centralization of services and data. Feeds should be easily consumable in standard formats (e.g. JSON).
+* *Simplify federated identity management.* Federation allows an organization to extend their existing identity and access management to the cloud, while still retaining control. Supporting federation for dozens or hundreds of external providers is daunting, with entire products now on the market merely to address that issue. Make it as easy as possible for your customers to use federation, and stick to popular standards that integrate with existing enterprise directories. Also, support the full lifecycle of identity management  from creation and propagation to changing roles and retirement.
+* *Extend security to endpoints.* We've focused on cloud, but don't forget that mobility is marching along right beside it, just as disruptive. Endpoint access to your service and data, including apps, APIs, and web interfaces, should support all security features equally across platforms. Well document the security differences across platforms, such as the different data exposure on an iOS device vs. Android vs. a laptop.
+* *Encrypt by default.* If you hold customer data, encrypt it. Even if you don't think it adds much to security, it empowers trust and supports compliance. Then, allow customers who want to to control their own keys. This is technically and operationally complex, but becomes a competitive differentiator, and potentially eliminates many data security concerns and smoothes cloud adoption
+* *Maintain security table stakes.* Different types of services handling different types of workflows and data tend to have a common security baseline. Fall below this, and customers will be drawn to the competition. For example, IaaS providers must include basic network security on a per-server level. SaaS providers need to support different user roles for access management. These will change over time, so watch your competition and listen to what customers are asking for.
+* *Document security.* Provide customers extensive documentation for both your internal security controls, and the security features they can use. Have these externally audited and assessed. This allows customers to know where the security lines are drawn, where they need to implement their own security controls, and how. Pay particular attention to documenting the administrator controls that restrict your staff's ability to see customer data, and audits when they do.
+
+These principles are far from all the security features and capabilities cloud providers should consider, but strongly align with how we see enterprise security evolving.
+
+##Conclusion
+
+Once, many years ago, I had the fortune to enjoy a few beers with futurist and science fiction author Bruce Sterling. That night he told me that his job as a futurist is to try and predict the world seven to ten years from now, which is where informed estimates become speculative fiction. As analysts we normally look out three to five years, and when we hit seven to ten years the odds of our predictions being accurate decline.
+
+Unless we cheat.
+
+Nothing we described in this paper is science fiction. There are real-world examples of everything we've discussed in production deployments with brand-names. This paper doesn't predict a future ten years out, it merely pulls together the leading edge of what we see today, with the expectation that it takes seven to ten years to coalesce and trickle out to the broader world. Looking at technology adoption cycles, and the sheer amount of effort it takes to transition the majority of existing workloads to cloud computing and new security platforms, even ten years might be aggressive for many organizations. 
+
+The security future is here, it just isn't evenly distributed. Although all of this is happening now, it isn't all happening together. But if you look hard, make smart decisions, and plan for the future you can, most definitely, experience these benefits today. 
