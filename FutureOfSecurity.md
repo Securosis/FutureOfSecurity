@@ -80,7 +80,7 @@ We have always known the dramatic security benefits of effective compartmentaliz
 
 Hypersegregation makes it much more difficult for an attacker to extend their footprint once they gain access to a network or system, and increases the likelihood of detection.
 
-Most major cloud computing platforms provide cloud-layer software firewalls, by default, around every running virtual machine. In cloud infrastructure, every single server is firewalled off from every other one by default. The equivalent in a traditional environment would be either a) host-based firewalls on every host, of every system type, with easily and immediately managed policies across all devices, or b) putting a physical firewall in front of every host on the network, which travels with the host if and when it moves.
+Most major cloud computing platforms provide cloud-layer software firewalls, by default, around every running virtual machine. In cloud infrastructure, every single server can be firewalled off from every other one from the moment it is provisioned. The equivalent in a traditional environment would be either a) host-based firewalls on every host, of every system type, with easily and immediately managed policies across all devices, or b) putting a physical firewall in front of every host on the network, which travels with the host if and when it moves.
 
 These basic firewalls are managed via APIs, and by default even segregate every server from every other server -- even on the same subnet. There is no such thing as a flat network when you deploy onto Infrastructure as a Service, unless you *work hard* to reproduce the less secure architecture.
 
